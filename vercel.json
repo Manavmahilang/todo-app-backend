@@ -1,0 +1,6 @@
+{
+    "routes": [
+      { "handle": "src/api/*", "src": "/todo/(.*)" }
+    ],
+    "builds": [{ "src": "vercel-build.ts", "use": "@now/node-server" }]
+  }
