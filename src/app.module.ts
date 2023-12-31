@@ -7,7 +7,7 @@ import { DatabaseModule } from 'database/database.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'sqlite',
-      database: 'C:/My Project/TODOtask/todo-app-backend/db/database.sqlite',
+      database: process.env.DATABASE_FILE,
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true, // Don't use this in production, it drops the database schema and recreates it
     }),
